@@ -1,0 +1,152 @@
+/* Form styles for Cottagecore Grocery Bud */
+.form-section {
+    background-color: var(--color-parchment);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-subtle);
+    margin-bottom: var(--spacing-lg);
+    border: 1px solid rgba(139, 69, 19, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.form-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--color-sage), var(--color-lavender), var(--color-rose));
+}
+
+.form-section h2 {
+    font-family: var(--font-heading);
+    color: var(--color-forest-green);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-section h2 i {
+    margin-right: var(--spacing-sm);
+    color: var(--color-clay);
+}
+
+.cottage-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+    .cottage-form {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .cottage-form .form-group:nth-child(1) {
+        grid-column: span 2;
+    }
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm) 3rem;
+    border: 1px solid rgba(139, 69, 19, 0.2);
+    border-radius: var(--border-radius-md);
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-ink);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-moss-green);
+    box-shadow: 0 0 0 3px rgba(85, 107, 47, 0.1);
+}
+
+.form-icon {
+    position: absolute;
+    left: var(--spacing-sm);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-moss-green);
+    font-size: 1.2rem;
+}
+
+.btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xs);
+}
+
+.btn-primary {
+    background-color: var(--color-moss-green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-forest-green);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+    background-color: var(--color-rose);
+    color: var(--color-ink);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-clay);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.notification {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.notification.success {
+    background-color: rgba(138, 154, 91, 0.2);
+    color: var(--color-forest-green);
+    border: 1px solid var(--color-moss-green);
+    display: block;
+}
+
+.notification.error {
+    background-color: rgba(187, 133, 136, 0.2);
+    color: var(--color-clay);
+    border: 1px solid var(--color-clay);
+    display: block;
+}
+
+.notification.info {
+    background-color: rgba(184, 188, 134, 0.2);
+    color: var(--color-wood);
+    border: 1px solid var(--color-sage);
+    display: block;
+}
