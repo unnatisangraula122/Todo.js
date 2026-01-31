@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Bud - Cottagecore Edition</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/single-item.css">
+    <link rel="stylesheet" href="css/items.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <div class="header-decoration">
+                <i class="fas fa-leaf leaf-left"></i>
+                <i class="fas fa-leaf leaf-right"></i>
+                <i class="fas fa-seedling seedling"></i>
+            </div>
+            <h1><i class="fas fa-basket-simple"></i> Grocery Bud</h1>
+            <p class="subtitle">A charming cottagecore grocery list</p>
+            <div class="vintage-border"></div>
+        </header>
+
+      
+        <main class="app-main">
+            <section class="form-section">
+                <h2><i class="fas fa-feather-alt"></i> Add New Item</h2>
+                <form id="grocery-form" class="cottage-form">
+                    <div class="form-group">
+                        <input type="text" id="item-name" placeholder="What do you need from the market?" required>
+                        <div class="form-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select id="item-category">
+                            <option value="produce">Produce</option>
+                            <option value="dairy">Dairy & Eggs</option>
+                            <option value="bakery">Bakery</option>
+                            <option value="pantry">Pantry</option>
+                            <option value="meat">Meat & Fish</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="form-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="item-quantity" placeholder="Quantity" min="1" value="1">
+                        <div class="form-icon">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                    </div>
+                    <button type="submit" id="submit-btn" class="btn btn-primary">
+                        <i class="fas fa-plus-circle"></i> Add to List
+                    </button>
+                    <button type="button" id="clear-all-btn" class="btn btn-secondary">
+                        <i class="fas fa-broom"></i> Clear All
+                    </button>
+                </form>
+                <div class="notification" id="notification"></div>
+            </section>
+
+         
+            <section class="items-section">
+                <h2><i class="fas fa-scroll"></i> Your Grocery List</h2>
+                <div class="list-stats">
+                    <span id="total-items">0 items</span>
+                    <span id="completed-items">0 completed</span>
+                </div>
+                
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pending">To Buy</button>
+                    <button class="filter-btn" data-filter="completed">Purchased</button>
+                </div>
+                
+                
+                <div class="items-container" id="items-container">
+                    <div class="empty-state" id="empty-state">
+                        <i class="fas fa-seedling"></i>
+                        <p>Your grocery list is empty. Add some items to get started!</p>
+                    </div>
+                   
+                </div>
+            </section>
+        </main>
+
+      
+        <footer class="app-footer">
+            <div class="footer-decoration">
+                <i class="fas fa-flower"></i>
+                <i class="fas fa-mushroom"></i>
+                <i class="fas fa-flower"></i>
+            </div>
+            <p>Made with <i class="fas fa-heart"></i> for cottagecore lovers</p>
+            <p class="footer-note">Organize your market trips with rustic charm</p>
+        </footer>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/single-item.js"></script>
+    <script src="js/items.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
