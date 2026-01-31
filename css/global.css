@@ -4,25 +4,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
-  background: #dfc8d5;
-  font-family: Helvetica, sans-serif;
+  background: linear-gradient(180deg, #f6ede8, #e9d7df);
+  font-family: "Playfair Display", serif;
   font-weight: 400;
-  line-height: 1.2;
-  color: #380202;
+  line-height: 1.6;
+  color: #4a2c2a;
 }
-
 .section-center {
   margin: 0 auto;
   margin-top: 8rem;
-  max-width: 30rem;
-  background: #a2417dcb;
-  border-radius: 0.25rem;
- font-family: "Playfair Display", serif; padding: 2rem;
+  max-width: 32rem;
+  background: rgba(255, 248, 245, 0.9);
+  border-radius: 1rem;
+  padding: 2.5rem;
   position: relative;
-  
-  
+  box-shadow: 0 10px 30px rgba(120, 70, 90, 0.2);
+  border: 1px solid rgba(180, 120, 140, 0.25);
 }
